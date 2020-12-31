@@ -1,0 +1,31 @@
+::::::::::::::::::::::::::::::::BESTUURINGSYSTEMEN 2::::::::::::::::::::::::::::::::
+____________________________________________________________________________________
+
+-- les 1
+
+- DOCKER : SAMENVATTING 
+
+Een docker image is een klein mogelijke software nodig om net dat ene proces te laten draaien.
+Een docker container is een instantie van een image.
+
+Een docker file is eigenlijk het containerization van virtuelen machines.
+Als je een virtuele machine instaleert om ubuntu op te draaien bijvoorbeeld dan moet je eerst 
+een virtuele machine aanmaken en dan nadien moet je een image van ubuntu dowloaden en installer.
+Een docker image doet dit volledige process op zichzelf met het minst moodzakelijk mogelijk.
+Daardoor werkt elke app die op u systeem werkt ook op elk ander systeem.
+Dit komt omdat de compting evironment consistent wat betekent dat er een omgeving word gemaakt
+
+Een container is een software pak dat alles heeft wat nodig is om de software te runnen maar niet meer
+en daardoor zijn de images zo klein mogelijk.
+
+Docker heeft verschillende command(version, container, pull, run, images, attach, stop, start.
+Docker pull haalt een zeker images van de vraag van het internet en zet het op je local disk.
+Docker run (bv docker run -it debian ls /root/test) elke docker run maakt een ander verschillende
+container.
+Docker start en stop word gedaan door docker run en docker rm  
+
+Docker file ziet er gelijk dit uit 
+FROM debian:latest
+RUN apt update && apt -y upgrade && apt install -y apache2
+EXPOSE 80
+CMD ["apachectl","-DFOREGROUND"]

@@ -1,0 +1,25 @@
+::::::::::::::::::::::::::::::::BESTUURINGSYSTEMEN 2::::::::::::::::::::::::::::::::
+____________________________________________________________________________________
+
+-- les 3
+
+- DEVOPS-CICD : SAMENVATTING 
+
+Vroeger schreven developers hun eigen code en teste ze die direct op hun eigen test manier.
+Deze methode houd in write a failing test -- make the test pass -- refactor en operniew 
+
+Nu zijn er daarvoor oparations.
+en dat gaat in via plan -- code -- build -- test -- release -- deploy -- operate -- monitor 
+
+Het verschill tussen agile ci/cd en devops is
+- agile = focuses on processes with highlighting on change while accelerating 
+- ci/cd = focuses on software-defined life cycles with highlighting tools  that emphasize automation
+- devops = focuses on culture with highlighting roles that emphasize responsiveness
+
+- Forward proxy
+Een forward proxy is een extra server tussen u en het internet waardoor het internet denkt 
+dat jij die server bent.
+
+- Reverse proxy 
+Een reverse proxy doet exact het omgekeerde en zet een server voor de werkelijke servers waardoor 
+de echte servers nooit rechtstreeks kunnen aangeraakt worden.

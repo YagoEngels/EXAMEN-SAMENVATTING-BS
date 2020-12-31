@@ -1,0 +1,26 @@
+::::::::::::::::::::::::::::::::BESTUURINGSYSTEMEN 2::::::::::::::::::::::::::::::::
+____________________________________________________________________________________
+
+-- les 4
+
+- Ansible : SAMENVATTING
+
+Ansible is een automation language die een application kan omschrijven in een playbook 
+regel per regel, dan heb je een automation engine die deze ansible playbooks volledig
+uitvoert.
+
+Playbooks describe the desired state of "application, invoke modiles executed by tasks
+
+Modules is een soort van black box woch passes the correct arguments to the modules and
+invoked on inventory
+
+Inventory is de targets van de playbook
+
+Een playbook is written in YAML , een playbook contains plays, plays contains tasks, tasks
+call modules , tasks run sequantially, handlers are triggered by tasks and run at the end
+fo plays.
+
+Ansible runt ge door ad hoc (calls a module directly via cli; bv ansible<inventory>-a/bin/ls
+or ansible <inventory>-m <module>
+
+Playbooks runt ge door ansible-playbook playbook.yml

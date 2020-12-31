@@ -1,0 +1,41 @@
+::::::::::::::::::::::::::::::::BESTUURINGSYSTEMEN 2::::::::::::::::::::::::::::::::
+____________________________________________________________________________________
+
+-- les 5
+
+- Monitoring : SAMENVATTING
+
+Elk aspect van manueel debuggen is gelijk aan veel werk, daarom is er een monitorsysteem
+een monitorsysteem monitort ieder component 
+
+Een bekende manier van monitoring is de drie lagen aanpak waarbij er drie lagen zijn 
+- foundation layer = controle van fysieke en virtuele machines
+- monitoring layer = processen, hardwaren data ophalen van de dingen die op de host gebeuren
+- interpretation layer = hoe presenteren we de data zodat we snel p^roblemen kunnen vinden 
+
+Soorten monitoring 
+-Polling = de server gaat de data met een geregeld interval ophalen bij de client 
+	(pos) = kan eenderwelk stuk data op eenderwelk moment ophalen 
+	(neg) = minder veilig
+	(ex) = [SNMP,RMON,Ping-test,Agent-based]
+
+-Pushing = de clients sturen de data naar de server 
+	(pos) = veiliger : de clietns hoeven niet te luistern op een bepaalde poort
+	(neg) = minder flexibel : voorgedefinieerde data word met een vast interval geexporteerd
+	(ex) = [SNMP(Traps),NetFlow/sFlow,Syslog,Agent-based]
+
+SNMP is de afkorting voor simple network management protocol, en het is ontwikkeld in de jaren
+80 , het was oorspronkelijk voor netwerkapparatuur maar is nadien uitgebreid naar andere 
+zaken zoals printers en servers , het kan ook gebruik worden om apparatuur te beheren
+
+OID staat voor object indentifiers 
+
+MIB staat voor Management information base en dit vertaalt OIDS naar gestructureerde text
+
+Er zijn een paar SNMP Commandos 
+- get : haalt data van een of meerdere OIDS op 
+- getnext : haalt de data van de volgende oid in de boom op
+- getbulk : is gelijkaardig aan getnetxt maar kan meerdeere itemns halen 
+- set : stelt een waarde in 
+- trap : de agent signaleert een gebeurtenis aan de server
+- inform : een trap maar de server stuurt een ack 
